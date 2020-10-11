@@ -5,6 +5,7 @@ END = 10000
 def pairs(n):
     return [(i, n / i) for i in range(1, int(n**0.5) + 1) if n % i == 0]
 
+
 while a < END:
 	fp = pairs(a*a)
 	for p in fp:
@@ -17,10 +18,11 @@ while a < END:
 		if a < b:
 			triples.append((a,b,c))
 	a += 1
+
 o = ""
 
 for t in triples:
-	o += str(t) + "\n"
+	o += str(t)[1:-1] + "\n"
 
 f = open("./out.txt", "w+")
 f.write(o)
