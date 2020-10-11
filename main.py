@@ -1,6 +1,6 @@
 a = 1
 triples = []
-END = 10000
+END = 10500
 
 def pairs(n):
     return [(i, n / i) for i in range(1, int(n**0.5) + 1) if n % i == 0]
@@ -24,7 +24,7 @@ o = ""
 for t in triples:
 	o += str(t)[1:-1] + "\n"
 
-f = open("./out.txt", "w+")
+f = open("./out.csv", "w+")
 f.write(o)
 
 print("Generated "+ str(len(triples)) + " Pythagorean triples.")
